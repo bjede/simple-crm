@@ -37,11 +37,11 @@ export class UserDetailComponent implements OnInit {
     })
   }
 
-  openAddressDialog() {
+  editUserAddress() {
 
   }
 
-  editMenu() {
+  editUserDetail() {
     
   }
 
