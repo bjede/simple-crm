@@ -1,0 +1,21 @@
+<mat-card class="user-detail-header">
+    <img class="user-detail-img" src="assets/img/profile.webp" alt="">
+    <div class="user-detail">
+        <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+        <p>{{ user.email }}</p>
+    </div>
+</mat-card>
+
+<mat-card class="mt-32">
+    <button [matMenuTriggerFor]="adressMenu" class="more-vert-icon" mat-icon-button (click)="openAddressDialog()">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #adressMenu="matMenu">
+        <button mat-menu-item (click)="editMenu()">Edit</button>
+      </mat-menu>
+        <mat-card-title>Address</mat-card-title>
+    <mat-card-content>
+        {{ user.street }}<br>
+        {{ user.zipCode }}   {{ user.city }}
+    </mat-card-content>
+</mat-card>
