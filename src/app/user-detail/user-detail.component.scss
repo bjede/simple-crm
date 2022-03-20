@@ -1,0 +1,32 @@
+.user-detail-header {
+    min-height: 200px;
+    background-color: rgb(204, 138, 17);
+    display: flex;
+    align-items: flex-end;
+    color: white;
+}
+
+.user-detail-img {
+    width: 100px;
+    border-radius: 100%;
+    border: 4px solid white;
+}
+
+.user-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100px;
+    margin-left: 30px;
+
+    h2 {
+        margin-bottom: 0;
+    }
+}
+
+.more-vert-icon {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    cursor: pointer;
+}
