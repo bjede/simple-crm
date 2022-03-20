@@ -4,14 +4,20 @@
         <h2>{{ user.firstName }} {{ user.lastName }}</h2>
         <p>{{ user.email }}</p>
     </div>
+    <button [matMenuTriggerFor]="userMenu" class="more-vert-icon" mat-icon-button>
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="editUserDetail()">Edit</button>
+      </mat-menu>
 </mat-card>
 
 <mat-card class="mt-32">
-    <button [matMenuTriggerFor]="adressMenu" class="more-vert-icon" mat-icon-button (click)="openAddressDialog()">
+    <button [matMenuTriggerFor]="adressMenu" class="more-vert-icon" mat-icon-button>
         <mat-icon>more_vert</mat-icon>
       </button>
       <mat-menu #adressMenu="matMenu">
-        <button mat-menu-item (click)="editMenu()">Edit</button>
+        <button mat-menu-item (click)="editUserAddress()">Edit</button>
       </mat-menu>
         <mat-card-title>Address</mat-card-title>
     <mat-card-content>
